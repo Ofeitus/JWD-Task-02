@@ -1,11 +1,11 @@
 package com.epam.jwd.task02.factory.impl;
 
-import com.epam.jwd.task02.factory.Factory;
+import com.epam.jwd.task02.factory.ApplianceFactory;
 import com.epam.jwd.task02.entity.Oven;
 
 import java.util.Map;
 
-public class OvenFactory implements Factory<Oven> {
+public class OvenFactory implements ApplianceFactory {
     private static final String CAPACITY = "CAPACITY";
     private static final String POWER_CONSUMPTION = "POWER_CONSUMPTION";
     private static final String WEIGHT = "WEIGHT";

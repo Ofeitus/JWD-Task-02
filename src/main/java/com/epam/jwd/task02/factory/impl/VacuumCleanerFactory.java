@@ -1,11 +1,11 @@
 package com.epam.jwd.task02.factory.impl;
 
-import com.epam.jwd.task02.factory.Factory;
+import com.epam.jwd.task02.factory.ApplianceFactory;
 import com.epam.jwd.task02.entity.VacuumCleaner;
 
 import java.util.Map;
 
-public class VacuumCleanerFactory implements Factory<VacuumCleaner> {
+public class VacuumCleanerFactory implements ApplianceFactory {
     private static final String CLEANING_WIDTH = "CLEANING_WIDTH";
     private static final String POWER_CONSUMPTION = "POWER_CONSUMPTION";
     private static final String BAG_TYPE = "BAG_TYPE";

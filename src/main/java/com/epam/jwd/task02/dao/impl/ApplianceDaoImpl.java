@@ -2,8 +2,8 @@ package com.epam.jwd.task02.dao.impl;
 
 import com.epam.jwd.task02.entity.criteria.Criteria;
 import com.epam.jwd.task02.exception.DaoException;
-import com.epam.jwd.task02.factory.Factory;
-import com.epam.jwd.task02.factory.FactoryProvider;
+import com.epam.jwd.task02.factory.ApplianceFactory;
+import com.epam.jwd.task02.factory.ApplianceFactoryProducer;
 import com.epam.jwd.task02.parser.Parser;
 import com.epam.jwd.task02.dao.ApplianceDao;
 import com.epam.jwd.task02.entity.Appliance;
@@ -22,7 +22,7 @@ public class ApplianceDaoImpl implements ApplianceDao {
 
     @Override
     public List<Appliance> findByCategory(String name) throws DaoException {
-        Factory<Appliance> factory = FactoryProvider.takeFactory(name);
+        ApplianceFactory applianceFactory = ApplianceFactoryProducer.getFactory(name);
         List<Appliance> appliances = new ArrayList<>();
         Parser parser = new Parser();
         try {
@@ -31,7 +31,7 @@ public class ApplianceDaoImpl implements ApplianceDao {
             List<String> products = lines.filter(o -> parser.parsName(o).equals(name)).collect(Collectors.toList());
             for (String product : products) {
                 Map<String, String> params = parser.parsParams(product);
-                appliances.add(factory.create(params));
+                appliances.add(applianceFactory.create(params));
             }
         } catch (IOException exception) {
             throw new DaoException(exception);
@@ -41,7 +41,7 @@ public class ApplianceDaoImpl implements ApplianceDao {
 
     @Override
     public List<Appliance> find(Criteria criteria) throws DaoException {
-        Factory<Appliance> factory = FactoryProvider.takeFactory(criteria.getGroupSearchName());
+        ApplianceFactory applianceFactory = ApplianceFactoryProducer.getFactory(criteria.getGroupSearchName());
         List<Appliance> appliances = new ArrayList<>();
         Parser parser = new Parser();
         Set<String> keyCriteria = criteria.getSearchCriteria();
@@ -55,7 +55,7 @@ public class ApplianceDaoImpl implements ApplianceDao {
             }).collect(Collectors.toList());
             for (String product : products) {
                 Map<String, String> params = parser.parsParams(product);
-                appliances.add(factory.create(params));
+                appliances.add(applianceFactory.create(params));
             }
         } catch (IOException exception) {
             throw new DaoException(exception);

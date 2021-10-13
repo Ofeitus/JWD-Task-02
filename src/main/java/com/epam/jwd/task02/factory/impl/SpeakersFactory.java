@@ -1,11 +1,11 @@
 package com.epam.jwd.task02.factory.impl;
 
-import com.epam.jwd.task02.factory.Factory;
+import com.epam.jwd.task02.factory.ApplianceFactory;
 import com.epam.jwd.task02.entity.Speakers;
 
 import java.util.Map;
 
-public class SpeakersFactory implements Factory<Speakers> {
+public class SpeakersFactory implements ApplianceFactory {
     private static final String POWER_CONSUMPTION = "POWER_CONSUMPTION";
     private static final String FREQUENCY_RANGE = "FREQUENCY_RANGE";
     private static final String NUMBER_OF_SPEAKERS = "NUMBER_OF_SPEAKERS";

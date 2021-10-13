@@ -16,7 +16,6 @@ public class ApplianceServiceImpl implements ApplianceService {
         try {
             appliances = DaoFactory.getInstance().getApplianceDAO().findByCategory(name);
         } catch (DaoException exception) {
-            //TODO: add logger
             throw new ServiceException(exception);
         }
         return appliances;
@@ -28,7 +27,6 @@ public class ApplianceServiceImpl implements ApplianceService {
         try {
             appliances = DaoFactory.getInstance().getApplianceDAO().find(criteria);
         } catch (DaoException exception) {
-            //TODO: add logger
             throw new ServiceException(exception);
         }
         return appliances;

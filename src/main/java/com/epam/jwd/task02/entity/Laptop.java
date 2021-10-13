@@ -3,11 +3,11 @@ package com.epam.jwd.task02.entity;
 import java.util.Objects;
 
 public class Laptop extends Appliance {
-    private String OS;
-    private float CPU;
     private float batteryCapacity;
+    private String OS;
     private int memoryROM;
     private int systemMemory;
+    private float CPU;
     private float displayInches;
 
     public Laptop() {
@@ -15,11 +15,11 @@ public class Laptop extends Appliance {
 
     public Laptop(float price, String OS, float CPU, float batteryCapacity, int memoryROM, int systemMemory, float displayInches) {
         super(price);
-        this.OS = OS;
-        this.CPU = CPU;
         this.batteryCapacity = batteryCapacity;
+        this.OS = OS;
         this.memoryROM = memoryROM;
         this.systemMemory = systemMemory;
+        this.CPU = CPU;
         this.displayInches = displayInches;
     }
 

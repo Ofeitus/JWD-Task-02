@@ -3,22 +3,22 @@ package com.epam.jwd.task02.entity;
 import java.util.Objects;
 
 public class TabletPC extends Appliance {
-    private String color;
-    private float flashMemoryCapacity;
     private float batteryCapacity;
-    private int memoryROM;
     private float displayInches;
+    private int memoryROM;
+    private float flashMemoryCapacity;
+    private String color;
 
     public TabletPC() {
     }
 
     public TabletPC(float price, String color, float flashMemoryCapacity, float batteryCapacity, int memoryROM, float displayInches) {
         super(price);
-        this.color = color;
-        this.flashMemoryCapacity = flashMemoryCapacity;
         this.batteryCapacity = batteryCapacity;
-        this.memoryROM = memoryROM;
         this.displayInches = displayInches;
+        this.memoryROM = memoryROM;
+        this.flashMemoryCapacity = flashMemoryCapacity;
+        this.color = color;
     }
 
     public String getColor() {

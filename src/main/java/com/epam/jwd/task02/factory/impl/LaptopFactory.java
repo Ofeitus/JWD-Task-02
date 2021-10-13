@@ -1,11 +1,11 @@
 package com.epam.jwd.task02.factory.impl;
 
 import com.epam.jwd.task02.entity.Laptop;
-import com.epam.jwd.task02.factory.Factory;
+import com.epam.jwd.task02.factory.ApplianceFactory;
 
 import java.util.Map;
 
-public class LaptopFactory implements Factory<Laptop> {
+public class LaptopFactory implements ApplianceFactory {
     private static final String CPU = "CPU";
     private static final String OS = "OS";
     private static final String MEMORY_ROM = "MEMORY_ROM";

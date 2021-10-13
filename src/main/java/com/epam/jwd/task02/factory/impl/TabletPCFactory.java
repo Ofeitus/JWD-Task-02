@@ -1,11 +1,11 @@
 package com.epam.jwd.task02.factory.impl;
 
-import com.epam.jwd.task02.factory.Factory;
+import com.epam.jwd.task02.factory.ApplianceFactory;
 import com.epam.jwd.task02.entity.TabletPC;
 
 import java.util.Map;
 
-public class TabletPCFactory implements Factory<TabletPC> {
+public class TabletPCFactory implements ApplianceFactory {
     private static final String FLASH_MEMORY_CAPACITY = "FLASH_MEMORY_CAPACITY";
     private static final String COLOR = "COLOR";
     private static final String DISPLAY_INCHES = "DISPLAY_INCHES";
