@@ -1,5 +1,6 @@
 package com.epam.jwd.task02.main;
 
+import com.epam.jwd.task02.entity.Refrigerator;
 import com.epam.jwd.task02.entity.criteria.Criteria;
 import com.epam.jwd.task02.exception.ServiceException;
 import com.epam.jwd.task02.service.ApplianceService;
@@ -30,17 +31,6 @@ public class Main {
 
         //////////////////////////////////////////////////////////////////
 
-        criteriaOven = new Criteria(Oven.class.getSimpleName());
-        criteriaOven.add(SearchCriteria.Oven.HEIGHT.toString(), 45);
-        criteriaOven.add(SearchCriteria.Oven.DEPTH.toString(), 60);
-
-        applianceList = service.find(criteriaOven);
-
-        System.out.println("find2");
-        PrintApplianceInfo.print(applianceList);
-
-        //////////////////////////////////////////////////////////////////
-
         Criteria criteriaTabletPC = new Criteria(TabletPC.class.getSimpleName());
         criteriaTabletPC.add(SearchCriteria.TabletPC.COLOR.toString(), "Blue");
         criteriaTabletPC.add(SearchCriteria.TabletPC.DISPLAY_INCHES.toString(), 14);
@@ -49,6 +39,22 @@ public class Main {
         applianceList = service.find(criteriaTabletPC);
 
         System.out.println("find3");
+        PrintApplianceInfo.print(applianceList);
+
+        //////////////////////////////////////////////////////////////////
+
+        criteriaOven = new Criteria(Refrigerator.class.getSimpleName());
+
+        applianceList = service.find(criteriaOven);
+
+        System.out.println("find2");
+        PrintApplianceInfo.print(applianceList);
+
+        //////////////////////////////////////////////////////////////////
+
+        applianceList = service.findMin(SearchCriteria.PRICE);
+
+        System.out.println("find2");
         PrintApplianceInfo.print(applianceList);
     }
 }

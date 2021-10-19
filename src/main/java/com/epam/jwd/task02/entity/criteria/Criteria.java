@@ -5,7 +5,7 @@ import java.util.Map;
 import java.util.Set;
 
 public class Criteria {
-    private String groupSearchName;
+    private String categoryName;
 
     private final Map<String, Object> criteria = new HashMap<>();
 
@@ -13,16 +13,16 @@ public class Criteria {
 
     }
 
-    public Criteria(String groupSearchName) {
-        this.groupSearchName = groupSearchName;
+    public Criteria(String categoryName) {
+        this.categoryName = categoryName;
     }
 
-    public String getGroupSearchName() {
-        return groupSearchName;
+    public String getCategoryName() {
+        return categoryName;
     }
 
-    public void setGroupSearchName(String groupSearchName) {
-        this.groupSearchName = groupSearchName;
+    public void setCategoryName(String categoryName) {
+        this.categoryName = categoryName;
     }
 
     public void add(String searchCriteria, Object value) {

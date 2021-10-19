@@ -11,17 +11,6 @@ import java.util.List;
 
 public class ApplianceServiceImpl implements ApplianceService {
     @Override
-    public List<Appliance> findByCategory(String name) throws ServiceException {
-        List<Appliance> appliances;
-        try {
-            appliances = DaoFactory.getInstance().getApplianceDAO().findByCategory(name);
-        } catch (DaoException exception) {
-            throw new ServiceException(exception);
-        }
-        return appliances;
-    }
-
-    @Override
     public List<Appliance> find(Criteria criteria) throws ServiceException {
         List<Appliance> appliances;
         try {

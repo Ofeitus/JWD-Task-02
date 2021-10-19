@@ -1,12 +1,14 @@
 package com.epam.jwd.task02.entity.criteria;
 
 public final class SearchCriteria {
+    public static final String PRICE = "PRICE";
+
     public enum Oven{
         POWER_CONSUMPTION, WEIGHT, CAPACITY, DEPTH, HEIGHT, WIDTH, PRICE
     }
 
     public enum Laptop{
-        BATTERY_CAPACITY, OS, MEMORY_ROM, SYSTEM_MEMORY, CPU, DISPLAY_INCHS, PRICE
+        BATTERY_CAPACITY, OS, MEMORY_ROM, SYSTEM_MEMORY, CPU, DISPLAY_INCHES, PRICE
     }
 
     public enum Refrigerator {

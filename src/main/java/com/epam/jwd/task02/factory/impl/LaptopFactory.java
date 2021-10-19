@@ -10,7 +10,7 @@ public class LaptopFactory implements ApplianceFactory {
     private static final String OS = "OS";
     private static final String MEMORY_ROM = "MEMORY_ROM";
     private static final String BATTERY_CAPACITY = "BATTERY_CAPACITY";
-    private static final String DISPLAY_INCHES = "DISPLAY_INCHS";
+    private static final String DISPLAY_INCHES = "DISPLAY_INCHES";
     private static final String SYSTEM_MEMORY = "WIDTH";
     private static final String PRICE = "PRICE";
 

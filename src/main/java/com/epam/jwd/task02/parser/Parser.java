@@ -1,23 +1,24 @@
 package com.epam.jwd.task02.parser;
 
+import com.epam.jwd.task02.exception.ParserException;
+
 import java.util.HashMap;
 import java.util.Map;
 
 public class Parser {
-    private static final String PRODUCT_NAME_DELIMITER = " : ";
+    private static final String PRODUCT_CATEGORY_DELIMITER = " : ";
     private static final String PRODUCT_PARAMETERS_DELIMITER = ", ";
     private static final String KEY_VALUE_DELIMITER = "=";
 
-    public String parsName(String line) {
-        return line.split(PRODUCT_NAME_DELIMITER)[0];
+    public String parseCategory(String line) throws ParserException {
+        return line.split(PRODUCT_CATEGORY_DELIMITER)[0];
     }
 
-    public Map<String, String> parsParams(String line) {
-        String[] productCharacteristics = line.split(PRODUCT_NAME_DELIMITER);
+    public Map<String, String> parseParams(String line) throws ParserException {
+        String[] stringParams = line.split(PRODUCT_CATEGORY_DELIMITER)[1].split(PRODUCT_PARAMETERS_DELIMITER);
         Map<String, String> params = new HashMap<>();
-        String[] characteristics = productCharacteristics[1].split(PRODUCT_PARAMETERS_DELIMITER);
-        for (String characteristic : characteristics) {
-            String[] parameter = characteristic.split(KEY_VALUE_DELIMITER);
+        for (String stringParam : stringParams) {
+            String[] parameter = stringParam.split(KEY_VALUE_DELIMITER);
             params.put(parameter[0], parameter[1]);
         }
         return params;
