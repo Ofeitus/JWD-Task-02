@@ -15,7 +15,7 @@ public class ApplianceFactoryProducer {
         put("SPEAKERS", new SpeakersFactory());
     }};
 
-    public static ApplianceFactory getFactory(String name) {
-        return factories.get(name.toUpperCase());
+    public static ApplianceFactory getFactory(String applianceCategory) {
+        return factories.get(applianceCategory.toUpperCase());
     }
 }
