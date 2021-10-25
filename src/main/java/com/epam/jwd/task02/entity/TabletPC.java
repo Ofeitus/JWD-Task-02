@@ -1,5 +1,10 @@
 package com.epam.jwd.task02.entity;
 
+import com.epam.jwd.task02.entity.criteria.AppliancesNames;
+import com.epam.jwd.task02.entity.criteria.AppliancesParams;
+
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Objects;
 
 public class TabletPC extends Appliance {
@@ -88,11 +93,24 @@ public class TabletPC extends Appliance {
     @Override
     public String toString() {
         return "TabletPC{" + "price=" + getPrice() +
-                "color='" + color + '\'' +
+                ", color='" + color + '\'' +
                 ", flashMemoryCapacity=" + flashMemoryCapacity +
                 ", batteryCapacity=" + batteryCapacity +
                 ", memoryROM=" + memoryROM +
                 ", displayInches=" + displayInches +
                 '}';
+    }
+
+    @Override
+    public Map<String, String> getParams() {
+        return new HashMap<>() {{
+            put("CATEGORY", AppliancesNames.TabletPC.name());
+            put(AppliancesParams.PRICE, String.valueOf(getPrice()));
+            put(AppliancesParams.TabletPC.COLOR.name(), String.valueOf(color));
+            put(AppliancesParams.TabletPC.FLASH_MEMORY_CAPACITY.name(), String.valueOf(flashMemoryCapacity));
+            put(AppliancesParams.TabletPC.BATTERY_CAPACITY.name(), String.valueOf(batteryCapacity));
+            put(AppliancesParams.TabletPC.MEMORY_ROM.name(), String.valueOf(memoryROM));
+            put(AppliancesParams.TabletPC.DISPLAY_INCHES.name(), String.valueOf(displayInches));
+        }};
     }
 }

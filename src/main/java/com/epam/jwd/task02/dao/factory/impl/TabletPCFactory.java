@@ -1,6 +1,6 @@
-package com.epam.jwd.task02.factory.impl;
+package com.epam.jwd.task02.dao.factory.impl;
 
-import com.epam.jwd.task02.factory.ApplianceFactory;
+import com.epam.jwd.task02.dao.factory.ApplianceFactory;
 import com.epam.jwd.task02.entity.TabletPC;
 
 import java.util.Map;

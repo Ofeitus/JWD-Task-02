@@ -8,4 +8,8 @@ import java.util.List;
 
 public interface ApplianceDao {
     List<Appliance> find(Criteria criteria) throws DaoException;
+
+    List<Appliance> getAll() throws DaoException;
+
+    void add(Appliance appliance) throws DaoException;
 }

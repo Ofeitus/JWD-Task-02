@@ -1,5 +1,10 @@
 package com.epam.jwd.task02.entity;
 
+import com.epam.jwd.task02.entity.criteria.AppliancesNames;
+import com.epam.jwd.task02.entity.criteria.AppliancesParams;
+
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Objects;
 
 public class Oven extends Appliance {
@@ -106,5 +111,19 @@ public class Oven extends Appliance {
                 ", height=" + height +
                 ", width=" + width +
                 '}';
+    }
+
+    @Override
+    public Map<String, String> getParams() {
+        return new HashMap<>() {{
+            put("CATEGORY", AppliancesNames.Oven.name());
+            put(AppliancesParams.PRICE, String.valueOf(getPrice()));
+            put(AppliancesParams.Oven.CAPACITY.name(), String.valueOf(capacity));
+            put(AppliancesParams.Oven.DEPTH.name(), String.valueOf(depth));
+            put(AppliancesParams.Oven.HEIGHT.name(), String.valueOf(height));
+            put(AppliancesParams.Oven.WIDTH.name(), String.valueOf(width));
+            put(AppliancesParams.Oven.POWER_CONSUMPTION.name(), String.valueOf(powerConsumption));
+            put(AppliancesParams.Oven.WEIGHT.name(), String.valueOf(weight));
+        }};
     }
 }

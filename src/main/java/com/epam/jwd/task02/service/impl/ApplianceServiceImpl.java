@@ -20,4 +20,24 @@ public class ApplianceServiceImpl implements ApplianceService {
         }
         return appliances;
     }
+
+    @Override
+    public List<Appliance> getAll() throws ServiceException {
+        List<Appliance> appliances;
+        try {
+            appliances = DaoFactory.getInstance().getApplianceDAO().getAll();
+        } catch (DaoException exception) {
+            throw new ServiceException(exception);
+        }
+        return appliances;
+    }
+
+    @Override
+    public void add(Appliance appliance) throws ServiceException {
+        try {
+            DaoFactory.getInstance().getApplianceDAO().add(appliance);
+        } catch (DaoException exception) {
+            throw new ServiceException(exception);
+        }
+    }
 }

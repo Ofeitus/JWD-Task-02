@@ -1,6 +1,7 @@
 package com.epam.jwd.task02.entity.criteria;
 
-public final class SearchCriteria {
+public final class AppliancesParams {
+    public static final String CATEGORY = "CATEGORY";
     public static final String PRICE = "PRICE";
 
     public enum Oven{
@@ -27,7 +28,7 @@ public final class SearchCriteria {
         POWER_CONSUMPTION, NUMBER_OF_SPEAKERS, FREQUENCY_RANGE, CORD_LENGTH, PRICE
     }
 
-    private SearchCriteria() {
+    private AppliancesParams() {
 
     }
 }

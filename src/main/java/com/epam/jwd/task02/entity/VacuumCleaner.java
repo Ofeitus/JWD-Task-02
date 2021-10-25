@@ -1,5 +1,10 @@
 package com.epam.jwd.task02.entity;
 
+import com.epam.jwd.task02.entity.criteria.AppliancesNames;
+import com.epam.jwd.task02.entity.criteria.AppliancesParams;
+
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Objects;
 
 public class VacuumCleaner extends Appliance {
@@ -99,15 +104,27 @@ public class VacuumCleaner extends Appliance {
 
     @Override
     public String toString() {
-        final StringBuilder sb = new StringBuilder("VacuumCleaner{");
-        sb.append("price=").append(getPrice());
-        sb.append(", powerConsumption=").append(powerConsumption);
-        sb.append(", filterType='").append(filterType).append('\'');
-        sb.append(", bagType='").append(bagType).append('\'');
-        sb.append(", wandType='").append(wandType).append('\'');
-        sb.append(", motorSpeedRegulation=").append(motorSpeedRegulation);
-        sb.append(", cleaningWidth=").append(cleaningWidth);
-        sb.append('}');
-        return sb.toString();
+        return "VacuumCleaner{" + "price=" + getPrice() +
+                ", powerConsumption=" + powerConsumption +
+                ", filterType='" + filterType + '\'' +
+                ", bagType='" + bagType + '\'' +
+                ", wandType='" + wandType + '\'' +
+                ", motorSpeedRegulation=" + motorSpeedRegulation +
+                ", cleaningWidth=" + cleaningWidth +
+                '}';
+    }
+
+    @Override
+    public Map<String, String> getParams() {
+        return new HashMap<>() {{
+            put("CATEGORY", AppliancesNames.VacuumCleaner.name());
+            put(AppliancesParams.PRICE, String.valueOf(getPrice()));
+            put(AppliancesParams.VacuumCleaner.POWER_CONSUMPTION.name(), String.valueOf(powerConsumption));
+            put(AppliancesParams.VacuumCleaner.FILTER_TYPE.name(), String.valueOf(filterType));
+            put(AppliancesParams.VacuumCleaner.BAG_TYPE.name(), String.valueOf(bagType));
+            put(AppliancesParams.VacuumCleaner.WAND_TYPE.name(), String.valueOf(wandType));
+            put(AppliancesParams.VacuumCleaner.MOTOR_SPEED_REGULATION.name(), String.valueOf(motorSpeedRegulation));
+            put(AppliancesParams.VacuumCleaner.CLEANING_WIDTH.name(), String.valueOf(cleaningWidth));
+        }};
     }
 }

@@ -8,4 +8,8 @@ import java.util.List;
 
 public interface ApplianceService {
     List<Appliance> find(Criteria criteria) throws ServiceException;
+
+    List<Appliance> getAll() throws ServiceException;
+
+    void add(Appliance appliance) throws ServiceException;
 }
