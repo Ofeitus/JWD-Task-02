@@ -19,7 +19,15 @@ import javax.xml.transform.stream.StreamResult;
 import java.io.File;
 import java.io.IOException;
 
+/**
+ * Implementation of Xml appliance writer.
+ */
 public class XmlApplianceWriter implements ApplianceWriter {
+    /**
+     * Remove whitespaces in xml file
+     *
+     * @param element the element
+     */
     public void removeWhitespaces(Element element) {
         NodeList children = element.getChildNodes();
         for (int i = children.getLength() - 1; i >= 0; i--) {

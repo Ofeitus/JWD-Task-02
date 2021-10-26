@@ -6,6 +6,9 @@ import com.epam.jwd.task02.constant.ApplianceParam;
 
 import java.util.Map;
 
+/**
+ * Class Tablet pc factory.
+ */
 public class TabletPCFactory implements ApplianceFactory {
     @Override
     public TabletPC create(Map<String, String> parameters) {

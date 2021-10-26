@@ -7,15 +7,33 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 
+/**
+ * Class that represents Speakers appliance
+ *
+ * @author Ofeitus
+ * @version 1.0
+ */
 public class Speakers extends Appliance {
     private float powerConsumption;
     private int numberOfSpeakers;
     private String frequencyRange;
     private float cordLength;
 
+    /**
+     * Instantiates a new Speakers.
+     */
     public Speakers() {
     }
 
+    /**
+     * Instantiates a new Speakers with specific params
+     *
+     * @param price            the price
+     * @param powerConsumption the power consumption
+     * @param numberOfSpeakers the number of speakers
+     * @param frequencyRange   the frequency range
+     * @param cordLength       the cord length
+     */
     public Speakers(float price, float powerConsumption, int numberOfSpeakers, String frequencyRange, float cordLength) {
         super(price);
         this.powerConsumption = powerConsumption;
@@ -24,34 +42,74 @@ public class Speakers extends Appliance {
         this.cordLength = cordLength;
     }
 
+    /**
+     * Gets power consumption.
+     *
+     * @return the power consumption
+     */
     public float getPowerConsumption() {
         return powerConsumption;
     }
 
+    /**
+     * Sets power consumption.
+     *
+     * @param powerConsumption the power consumption
+     */
     public void setPowerConsumption(float powerConsumption) {
         this.powerConsumption = powerConsumption;
     }
 
+    /**
+     * Gets number of speakers.
+     *
+     * @return the number of speakers
+     */
     public int getNumberOfSpeakers() {
         return numberOfSpeakers;
     }
 
+    /**
+     * Sets number of speakers.
+     *
+     * @param numberOfSpeakers the number of speakers
+     */
     public void setNumberOfSpeakers(int numberOfSpeakers) {
         this.numberOfSpeakers = numberOfSpeakers;
     }
 
+    /**
+     * Gets frequency range.
+     *
+     * @return the frequency range
+     */
     public String getFrequencyRange() {
         return frequencyRange;
     }
 
+    /**
+     * Sets frequency range.
+     *
+     * @param frequencyRange the frequency range
+     */
     public void setFrequencyRange(String frequencyRange) {
         this.frequencyRange = frequencyRange;
     }
 
+    /**
+     * Gets cord length.
+     *
+     * @return the cord length
+     */
     public float getCordLength() {
         return cordLength;
     }
 
+    /**
+     * Sets cord length.
+     *
+     * @param cordLength the cord length
+     */
     public void setCordLength(float cordLength) {
         this.cordLength = cordLength;
     }

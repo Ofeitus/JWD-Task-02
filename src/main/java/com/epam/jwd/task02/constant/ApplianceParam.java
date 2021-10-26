@@ -1,5 +1,8 @@
 package com.epam.jwd.task02.constant;
 
+/**
+ * Class for Appliance params.
+ */
 public final class ApplianceParam {
     public static final String CATEGORY = "CATEGORY";
     public static final String PRICE = "PRICE";

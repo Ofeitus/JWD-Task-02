@@ -7,6 +7,12 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 
+/**
+ * Class that represents TabletPC appliance
+ *
+ * @author Ofeitus
+ * @version 1.0
+ */
 public class TabletPC extends Appliance {
     private float batteryCapacity;
     private float displayInches;
@@ -14,9 +20,22 @@ public class TabletPC extends Appliance {
     private float flashMemoryCapacity;
     private String color;
 
+    /**
+     * Instantiates a new Tablet pc.
+     */
     public TabletPC() {
     }
 
+    /**
+     * Instantiates a new Tablet pc with specific params
+     *
+     * @param price               the price
+     * @param color               the color
+     * @param flashMemoryCapacity the flash memory capacity
+     * @param batteryCapacity     the battery capacity
+     * @param memoryROM           the memory rom
+     * @param displayInches       the display inches
+     */
     public TabletPC(float price, String color, float flashMemoryCapacity, float batteryCapacity, int memoryROM, float displayInches) {
         super(price);
         this.batteryCapacity = batteryCapacity;
@@ -26,42 +45,92 @@ public class TabletPC extends Appliance {
         this.color = color;
     }
 
+    /**
+     * Gets color.
+     *
+     * @return the color
+     */
     public String getColor() {
         return color;
     }
 
+    /**
+     * Sets color.
+     *
+     * @param color the color
+     */
     public void setColor(String color) {
         this.color = color;
     }
 
+    /**
+     * Gets flash memory capacity.
+     *
+     * @return the flash memory capacity
+     */
     public float getFlashMemoryCapacity() {
         return flashMemoryCapacity;
     }
 
+    /**
+     * Sets flash memory capacity.
+     *
+     * @param flashMemoryCapacity the flash memory capacity
+     */
     public void setFlashMemoryCapacity(float flashMemoryCapacity) {
         this.flashMemoryCapacity = flashMemoryCapacity;
     }
 
+    /**
+     * Gets battery capacity.
+     *
+     * @return the battery capacity
+     */
     public float getBatteryCapacity() {
         return batteryCapacity;
     }
 
+    /**
+     * Sets battery capacity.
+     *
+     * @param batteryCapacity the battery capacity
+     */
     public void setBatteryCapacity(float batteryCapacity) {
         this.batteryCapacity = batteryCapacity;
     }
 
+    /**
+     * Gets memory rom.
+     *
+     * @return the memory rom
+     */
     public int getMemoryROM() {
         return memoryROM;
     }
 
+    /**
+     * Sets memory rom.
+     *
+     * @param memoryROM the memory rom
+     */
     public void setMemoryROM(int memoryROM) {
         this.memoryROM = memoryROM;
     }
 
+    /**
+     * Gets display inches.
+     *
+     * @return the display inches
+     */
     public float getDisplayInches() {
         return displayInches;
     }
 
+    /**
+     * Sets display inches.
+     *
+     * @param displayInches the display inches
+     */
     public void setDisplayInches(float displayInches) {
         this.displayInches = displayInches;
     }

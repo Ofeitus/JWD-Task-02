@@ -41,7 +41,7 @@ public class Main {
 
         //////////////////////////////////////////////////////////////////
 
-        SearchCriteria searchCriteriaRefrigerator = new SearchCriteria("Rafrigerator");
+        SearchCriteria searchCriteriaRefrigerator = new SearchCriteria("Refrigerator");
 
         applianceList = service.find(searchCriteriaRefrigerator);
         System.out.println("find3");

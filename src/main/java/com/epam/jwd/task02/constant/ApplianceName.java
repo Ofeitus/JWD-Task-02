@@ -1,5 +1,8 @@
 package com.epam.jwd.task02.constant;
 
+/**
+ * Class for Appliance names.
+ */
 public final class ApplianceName {
     public static final String LAPTOP = "Laptop";
     public static final String OVEN = "Oven";

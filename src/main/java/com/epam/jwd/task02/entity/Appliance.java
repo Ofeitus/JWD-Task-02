@@ -7,21 +7,45 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 
+/**
+ * Abstract class that presents Appliance in shop
+ *
+ * @author Ofeitus
+ * @version 1.0
+ */
 public abstract class Appliance implements Parameterizable {
     private float price;
 
+    /**
+     * Instantiates a new Appliance.
+     */
     public Appliance() {
 
     }
 
+    /**
+     * Instantiates a new Appliance with specific params
+     *
+     * @param price the price
+     */
     public Appliance(float price) {
         this.price = price;
     }
 
+    /**
+     * Gets price.
+     *
+     * @return the price
+     */
     public float getPrice() {
         return price;
     }
 
+    /**
+     * Sets price.
+     *
+     * @param price the price
+     */
     public void setPrice(float price) {
         this.price = price;
     }

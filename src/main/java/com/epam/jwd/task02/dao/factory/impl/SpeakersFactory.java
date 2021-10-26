@@ -6,6 +6,9 @@ import com.epam.jwd.task02.constant.ApplianceParam;
 
 import java.util.Map;
 
+/**
+ * Class Speakers factory.
+ */
 public class SpeakersFactory implements ApplianceFactory {
     @Override
     public Speakers create(Map<String, String> parameters) {

@@ -17,6 +17,9 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * Implementation of Xml appliance parser.
+ */
 public class XmlApplianceParser implements ApplianceParser {
     private static List<Map<String, String>> appliancesParams;
 
@@ -32,6 +35,9 @@ public class XmlApplianceParser implements ApplianceParser {
         return appliancesParams;
     }
 
+    /**
+     * Event handler to xml parser
+     */
     private static class XMLHandler extends DefaultHandler {
         private boolean readingAppliances = false;
         private boolean finishedReadingAppliance = true;

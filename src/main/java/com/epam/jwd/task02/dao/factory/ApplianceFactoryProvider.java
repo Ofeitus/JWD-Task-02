@@ -6,7 +6,10 @@ import com.epam.jwd.task02.dao.factory.impl.*;
 import java.util.HashMap;
 import java.util.Map;
 
-public class ApplianceFactoryProducer {
+/**
+ * Class to provide Appliance factory.
+ */
+public class ApplianceFactoryProvider {
     private static final Map<String, ApplianceFactory> factories = new HashMap<>() {{
         put(ApplianceName.OVEN, new OvenFactory());
         put(ApplianceName.LAPTOP, new LaptopFactory());
@@ -16,11 +19,17 @@ public class ApplianceFactoryProducer {
         put(ApplianceName.SPEAKERS, new SpeakersFactory());
     }};
 
+    /**
+     * Gets specific factory by category name.
+     *
+     * @param applianceCategory the appliance category
+     * @return the factory
+     */
     public static ApplianceFactory getFactory(String applianceCategory) {
         return factories.get(applianceCategory);
     }
 
-    private ApplianceFactoryProducer() {
+    private ApplianceFactoryProvider() {
 
     }
 }

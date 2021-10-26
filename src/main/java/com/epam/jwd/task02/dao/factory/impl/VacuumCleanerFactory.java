@@ -6,6 +6,9 @@ import com.epam.jwd.task02.constant.ApplianceParam;
 
 import java.util.Map;
 
+/**
+ * Class Vacuum cleaner factory.
+ */
 public class VacuumCleanerFactory implements ApplianceFactory {
     @Override
     public VacuumCleaner create(Map<String, String> parameters) {

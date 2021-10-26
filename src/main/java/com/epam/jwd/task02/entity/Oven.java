@@ -7,6 +7,12 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 
+/**
+ * Class that represents Oven appliance
+ *
+ * @author Ofeitus
+ * @version 1.0
+ */
 public class Oven extends Appliance {
     private float powerConsumption;
     private float weight;
@@ -15,9 +21,23 @@ public class Oven extends Appliance {
     private float height;
     private float width;
 
+    /**
+     * Instantiates a new Oven.
+     */
     public Oven() {
     }
 
+    /**
+     * Instantiates a new Oven with specific params
+     *
+     * @param price            the price
+     * @param powerConsumption the power consumption
+     * @param weight           the weight
+     * @param capacity         the capacity
+     * @param depth            the depth
+     * @param height           the height
+     * @param width            the width
+     */
     public Oven(float price, float powerConsumption, float weight, float capacity, float depth, float height, float width) {
         super(price);
         this.powerConsumption = powerConsumption;
@@ -28,50 +48,110 @@ public class Oven extends Appliance {
         this.width = width;
     }
 
+    /**
+     * Gets power consumption.
+     *
+     * @return the power consumption
+     */
     public float getPowerConsumption() {
         return powerConsumption;
     }
 
+    /**
+     * Sets power consumption.
+     *
+     * @param powerConsumption the power consumption
+     */
     public void setPowerConsumption(float powerConsumption) {
         this.powerConsumption = powerConsumption;
     }
 
+    /**
+     * Gets weight.
+     *
+     * @return the weight
+     */
     public float getWeight() {
         return weight;
     }
 
+    /**
+     * Sets weight.
+     *
+     * @param weight the weight
+     */
     public void setWeight(float weight) {
         this.weight = weight;
     }
 
+    /**
+     * Gets capacity.
+     *
+     * @return the capacity
+     */
     public float getCapacity() {
         return capacity;
     }
 
+    /**
+     * Sets capacity.
+     *
+     * @param capacity the capacity
+     */
     public void setCapacity(float capacity) {
         this.capacity = capacity;
     }
 
+    /**
+     * Gets depth.
+     *
+     * @return the depth
+     */
     public float getDepth() {
         return depth;
     }
 
+    /**
+     * Sets depth.
+     *
+     * @param depth the depth
+     */
     public void setDepth(float depth) {
         this.depth = depth;
     }
 
+    /**
+     * Gets height.
+     *
+     * @return the height
+     */
     public float getHeight() {
         return height;
     }
 
+    /**
+     * Sets height.
+     *
+     * @param height the height
+     */
     public void setHeight(float height) {
         this.height = height;
     }
 
+    /**
+     * Gets width.
+     *
+     * @return the width
+     */
     public float getWidth() {
         return width;
     }
 
+    /**
+     * Sets width.
+     *
+     * @param width the width
+     */
     public void setWidth(float width) {
         this.width = width;
     }

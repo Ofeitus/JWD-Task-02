@@ -4,7 +4,15 @@ import com.epam.jwd.task02.entity.Appliance;
 
 import java.util.List;
 
+/**
+ * Class used to appliance info.
+ */
 public class PrintApplianceInfo {
+    /**
+     * Print appliances string representation to std out
+     *
+     * @param applianceList the appliance list
+     */
     public static void print(List<Appliance> applianceList) {
         if (applianceList != null) {
             for (Appliance appliance : applianceList) {

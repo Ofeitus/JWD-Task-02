@@ -7,6 +7,12 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 
+/**
+ * Class that represents Laptop appliance
+ *
+ * @author Ofeitus
+ * @version 1.0
+ */
 public class Laptop extends Appliance {
     private float batteryCapacity;
     private String OS;
@@ -15,9 +21,23 @@ public class Laptop extends Appliance {
     private float CPU;
     private float displayInches;
 
+    /**
+     * Instantiates a new Laptop.
+     */
     public Laptop() {
     }
 
+    /**
+     * Instantiates a new Laptop with specific params
+     *
+     * @param price           the price
+     * @param OS              the os
+     * @param CPU             the cpu
+     * @param batteryCapacity the battery capacity
+     * @param memoryROM       the memory rom
+     * @param systemMemory    the system memory
+     * @param displayInches   the display inches
+     */
     public Laptop(float price, String OS, float CPU, float batteryCapacity, int memoryROM, int systemMemory, float displayInches) {
         super(price);
         this.batteryCapacity = batteryCapacity;
@@ -28,50 +48,110 @@ public class Laptop extends Appliance {
         this.displayInches = displayInches;
     }
 
+    /**
+     * Gets os.
+     *
+     * @return the os
+     */
     public String getOS() {
         return OS;
     }
 
+    /**
+     * Sets os.
+     *
+     * @param OS the os
+     */
     public void setOS(String OS) {
         this.OS = OS;
     }
 
+    /**
+     * Gets cpu.
+     *
+     * @return the cpu
+     */
     public float getCPU() {
         return CPU;
     }
 
+    /**
+     * Sets cpu.
+     *
+     * @param CPU the cpu
+     */
     public void setCPU(float CPU) {
         this.CPU = CPU;
     }
 
+    /**
+     * Gets battery capacity.
+     *
+     * @return the battery capacity
+     */
     public float getBatteryCapacity() {
         return batteryCapacity;
     }
 
+    /**
+     * Sets battery capacity.
+     *
+     * @param batteryCapacity the battery capacity
+     */
     public void setBatteryCapacity(float batteryCapacity) {
         this.batteryCapacity = batteryCapacity;
     }
 
+    /**
+     * Gets memory rom.
+     *
+     * @return the memory rom
+     */
     public int getMemoryROM() {
         return memoryROM;
     }
 
+    /**
+     * Sets memory rom.
+     *
+     * @param memoryROM the memory rom
+     */
     public void setMemoryROM(int memoryROM) {
         this.memoryROM = memoryROM;
     }
 
+    /**
+     * Gets system memory.
+     *
+     * @return the system memory
+     */
     public int getSystemMemory() {
         return systemMemory;
     }
 
+    /**
+     * Sets system memory.
+     *
+     * @param systemMemory the system memory
+     */
     public void setSystemMemory(int systemMemory) {
         this.systemMemory = systemMemory;
     }
 
+    /**
+     * Gets display inches.
+     *
+     * @return the display inches
+     */
     public float getDisplayInches() {
         return displayInches;
     }
 
+    /**
+     * Sets display inches.
+     *
+     * @param displayInches the display inches
+     */
     public void setDisplayInches(float displayInches) {
         this.displayInches = displayInches;
     }

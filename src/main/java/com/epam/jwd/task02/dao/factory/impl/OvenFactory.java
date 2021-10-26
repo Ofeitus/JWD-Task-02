@@ -6,6 +6,9 @@ import com.epam.jwd.task02.entity.Oven;
 
 import java.util.Map;
 
+/**
+ * Class Oven factory.
+ */
 public class OvenFactory implements ApplianceFactory {
     @Override
     public Oven create(Map<String, String> parameters) {

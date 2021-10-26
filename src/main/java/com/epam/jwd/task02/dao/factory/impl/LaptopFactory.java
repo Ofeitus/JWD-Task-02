@@ -6,6 +6,9 @@ import com.epam.jwd.task02.dao.factory.ApplianceFactory;
 
 import java.util.Map;
 
+/**
+ * Class Laptop factory.
+ */
 public class LaptopFactory implements ApplianceFactory {
     @Override
     public Laptop create(Map<String, String> parameters) {

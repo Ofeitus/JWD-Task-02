@@ -9,6 +9,9 @@ import com.epam.jwd.task02.service.ServiceException;
 
 import java.util.List;
 
+/**
+ * Appliance service implementation.
+ */
 public class ApplianceServiceImpl implements ApplianceService {
     @Override
     public List<Appliance> find(SearchCriteria searchCriteria) throws ServiceException {
