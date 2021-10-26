@@ -2,6 +2,9 @@ package com.epam.jwd.task02.dao.writer;
 
 /**
  * Class to catch Xml writer exception.
+ *
+ * @author Ofeitus
+ * @version 1.0
  */
 public class XmlWriterException extends Exception{
     /**

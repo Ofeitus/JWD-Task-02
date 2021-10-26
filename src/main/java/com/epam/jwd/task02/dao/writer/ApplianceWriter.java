@@ -10,6 +10,9 @@ import java.io.IOException;
 
 /**
  * The interface to Appliance writer.
+ *
+ * @author Ofeitus
+ * @version 1.0
  */
 public interface ApplianceWriter {
     /**

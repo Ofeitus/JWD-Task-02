@@ -10,6 +10,9 @@ import java.util.Map;
 
 /**
  * The interface to Appliance parser.
+ *
+ * @author Ofeitus
+ * @version 1.0
  */
 public interface ApplianceParser {
     /**

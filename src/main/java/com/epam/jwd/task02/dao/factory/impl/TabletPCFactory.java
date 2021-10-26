@@ -8,6 +8,9 @@ import java.util.Map;
 
 /**
  * Class Tablet pc factory.
+ *
+ * @author Ofeitus
+ * @version 1.0
  */
 public class TabletPCFactory implements ApplianceFactory {
     @Override

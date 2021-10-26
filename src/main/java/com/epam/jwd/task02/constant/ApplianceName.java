@@ -2,6 +2,9 @@ package com.epam.jwd.task02.constant;
 
 /**
  * Class for Appliance names.
+ *
+ * @author Ofeitus
+ * @version 1.0
  */
 public final class ApplianceName {
     public static final String LAPTOP = "Laptop";

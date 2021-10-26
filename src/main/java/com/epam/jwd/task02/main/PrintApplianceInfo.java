@@ -6,6 +6,9 @@ import java.util.List;
 
 /**
  * Class used to appliance info.
+ *
+ * @author Ofeitus
+ * @version 1.0
  */
 public class PrintApplianceInfo {
     /**

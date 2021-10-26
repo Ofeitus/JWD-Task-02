@@ -6,6 +6,9 @@ import java.util.Map;
 
 /**
  * The interface to Appliance factory.
+ *
+ * @author Ofeitus
+ * @version 1.0
  */
 public interface ApplianceFactory {
     /**

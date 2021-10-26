@@ -2,6 +2,9 @@ package com.epam.jwd.task02.service;
 
 /**
  * Class to catch Service exception.
+ *
+ * @author Ofeitus
+ * @version 1.0
  */
 public class ServiceException extends Exception {
     /**

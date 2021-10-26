@@ -25,6 +25,9 @@ import java.util.Objects;
 
 /**
  * Implementation of Appliance dao xml.
+ *
+ * @author Ofeitus
+ * @version 1.0
  */
 public class ApplianceDaoXml implements ApplianceDao {
     private final File dbFile = new File(

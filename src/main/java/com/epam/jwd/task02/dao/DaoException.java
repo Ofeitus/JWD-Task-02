@@ -2,6 +2,9 @@ package com.epam.jwd.task02.dao;
 
 /**
  * Class to catch Dao exception.
+ *
+ * @author Ofeitus
+ * @version 1.0
  */
 public class DaoException extends Exception {
     /**

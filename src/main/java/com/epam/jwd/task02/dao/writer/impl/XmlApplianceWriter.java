@@ -21,6 +21,9 @@ import java.io.IOException;
 
 /**
  * Implementation of Xml appliance writer.
+ *
+ * @author Ofeitus
+ * @version 1.0
  */
 public class XmlApplianceWriter implements ApplianceWriter {
     /**

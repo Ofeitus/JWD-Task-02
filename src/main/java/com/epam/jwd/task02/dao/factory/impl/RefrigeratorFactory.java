@@ -8,6 +8,9 @@ import java.util.Map;
 
 /**
  * Class Refrigerator factory.
+ *
+ * @author Ofeitus
+ * @version 1.0
  */
 public class RefrigeratorFactory implements ApplianceFactory {
     @Override

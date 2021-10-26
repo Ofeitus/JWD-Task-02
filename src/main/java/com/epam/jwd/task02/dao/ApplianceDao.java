@@ -7,6 +7,9 @@ import java.util.List;
 
 /**
  * The interface to Appliance dao.
+ *
+ * @author Ofeitus
+ * @version 1.0
  */
 public interface ApplianceDao {
     /**

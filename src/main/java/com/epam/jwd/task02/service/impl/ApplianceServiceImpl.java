@@ -11,6 +11,9 @@ import java.util.List;
 
 /**
  * Appliance service implementation.
+ *
+ * @author Ofeitus
+ * @version 1.0
  */
 public class ApplianceServiceImpl implements ApplianceService {
     @Override

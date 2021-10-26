@@ -8,6 +8,9 @@ import java.util.Map;
 
 /**
  * Class Vacuum cleaner factory.
+ *
+ * @author Ofeitus
+ * @version 1.0
  */
 public class VacuumCleanerFactory implements ApplianceFactory {
     @Override

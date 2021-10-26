@@ -2,6 +2,9 @@ package com.epam.jwd.task02.dao.parser;
 
 /**
  * Class to catch Xml parser exception.
+ *
+ * @author Ofeitus
+ * @version 1.0
  */
 public class XmlParserException extends Exception{
     /**

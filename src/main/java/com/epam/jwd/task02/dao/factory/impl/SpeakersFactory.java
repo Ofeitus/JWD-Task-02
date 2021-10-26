@@ -8,6 +8,9 @@ import java.util.Map;
 
 /**
  * Class Speakers factory.
+ *
+ * @author Ofeitus
+ * @version 1.0
  */
 public class SpeakersFactory implements ApplianceFactory {
     @Override

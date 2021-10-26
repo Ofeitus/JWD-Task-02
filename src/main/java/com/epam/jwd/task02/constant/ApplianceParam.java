@@ -2,6 +2,9 @@ package com.epam.jwd.task02.constant;
 
 /**
  * Class for Appliance params.
+ *
+ * @author Ofeitus
+ * @version 1.0
  */
 public final class ApplianceParam {
     public static final String CATEGORY = "CATEGORY";

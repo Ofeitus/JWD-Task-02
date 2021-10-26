@@ -7,6 +7,9 @@ import java.util.List;
 
 /**
  * Interface to Appliance services
+ *
+ * @author Ofeitus
+ * @version 1.0
  */
 public interface ApplianceService {
     /**

@@ -4,6 +4,9 @@ import com.epam.jwd.task02.dao.impl.ApplianceDaoXml;
 
 /**
  * Class to provide ApplianceDAO object.
+ *
+ * @author Ofeitus
+ * @version 1.0
  */
 public class DaoFactory {
     private static final DaoFactory instance = new DaoFactory();

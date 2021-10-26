@@ -8,6 +8,9 @@ import java.util.Map;
 
 /**
  * Class Oven factory.
+ *
+ * @author Ofeitus
+ * @version 1.0
  */
 public class OvenFactory implements ApplianceFactory {
     @Override

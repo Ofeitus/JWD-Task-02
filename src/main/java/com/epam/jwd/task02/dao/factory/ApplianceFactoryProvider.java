@@ -8,6 +8,9 @@ import java.util.Map;
 
 /**
  * Class to provide Appliance factory.
+ *
+ * @author Ofeitus
+ * @version 1.0
  */
 public class ApplianceFactoryProvider {
     private static final Map<String, ApplianceFactory> factories = new HashMap<>() {{

@@ -4,6 +4,9 @@ import com.epam.jwd.task02.service.impl.ApplianceServiceImpl;
 
 /**
  * Class to provide ApplianceService object.
+ *
+ * @author Ofeitus
+ * @version 1.0
  */
 public class ServiceFactory {
     private static final ServiceFactory instance = new ServiceFactory();

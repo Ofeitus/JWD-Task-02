@@ -9,6 +9,8 @@ import java.util.Set;
  * contains appliance category and map of parameters:
  * Key - parameter name, Value - parameter value
  *
+ * @author Ofeitus
+ * @version 1.0
  */
 public class SearchCriteria {
     private String category;
