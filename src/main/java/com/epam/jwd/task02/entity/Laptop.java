@@ -1,7 +1,7 @@
 package com.epam.jwd.task02.entity;
 
-import com.epam.jwd.task02.entity.criteria.AppliancesNames;
-import com.epam.jwd.task02.entity.criteria.AppliancesParams;
+import com.epam.jwd.task02.constant.ApplianceName;
+import com.epam.jwd.task02.constant.ApplianceParam;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -116,12 +116,12 @@ public class Laptop extends Appliance {
     @Override
     public Map<String, String> getParams() {
         return new HashMap<>() {{
-            put("CATEGORY", AppliancesNames.Laptop.name());
-            put(AppliancesParams.PRICE, String.valueOf(getPrice()));
-            put(AppliancesParams.Laptop.BATTERY_CAPACITY.name(), String.valueOf(batteryCapacity));
-            put(AppliancesParams.Laptop.CPU.name(), String.valueOf(CPU));
-            put(AppliancesParams.Laptop.DISPLAY_INCHES.name(), String.valueOf(displayInches));
-            put(AppliancesParams.Laptop.SYSTEM_MEMORY.name(), String.valueOf(systemMemory));
+            put("CATEGORY", ApplianceName.LAPTOP);
+            put(ApplianceParam.PRICE, String.valueOf(getPrice()));
+            put(ApplianceParam.Laptop.BATTERY_CAPACITY.name(), String.valueOf(batteryCapacity));
+            put(ApplianceParam.Laptop.CPU.name(), String.valueOf(CPU));
+            put(ApplianceParam.Laptop.DISPLAY_INCHES.name(), String.valueOf(displayInches));
+            put(ApplianceParam.Laptop.SYSTEM_MEMORY.name(), String.valueOf(systemMemory));
         }};
     }
 }

@@ -1,4 +1,4 @@
-package com.epam.jwd.task02.exception;
+package com.epam.jwd.task02.dao.parser;
 
 public class XmlParserException extends Exception{
     public XmlParserException() {

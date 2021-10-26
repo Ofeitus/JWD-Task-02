@@ -2,8 +2,8 @@ package com.epam.jwd.task02.dao.writer.impl;
 
 import com.epam.jwd.task02.dao.writer.ApplianceWriter;
 import com.epam.jwd.task02.entity.Appliance;
-import com.epam.jwd.task02.entity.criteria.AppliancesParams;
-import com.epam.jwd.task02.exception.XmlWriterException;
+import com.epam.jwd.task02.constant.ApplianceParam;
+import com.epam.jwd.task02.dao.writer.XmlWriterException;
 import org.w3c.dom.*;
 import org.xml.sax.SAXException;
 
@@ -43,10 +43,10 @@ public class XmlApplianceWriter implements ApplianceWriter {
         removeWhitespaces(document.getDocumentElement());
 
         // add element
-        Element newAppliance = document.createElement(appliance.getParams().get(AppliancesParams.CATEGORY));
+        Element newAppliance = document.createElement(appliance.getParams().get(ApplianceParam.CATEGORY));
 
         for (String param : appliance.getParams().keySet()) {
-            if (!param.equals(AppliancesParams.CATEGORY)) {
+            if (!param.equals(ApplianceParam.CATEGORY)) {
                 Element element = document.createElement(param.toLowerCase());
                 element.appendChild(document.createTextNode(appliance.getParams().get(param)));
                 newAppliance.appendChild(element);

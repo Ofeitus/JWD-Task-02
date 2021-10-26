@@ -1,7 +1,7 @@
 package com.epam.jwd.task02.entity;
 
-import com.epam.jwd.task02.entity.criteria.AppliancesNames;
-import com.epam.jwd.task02.entity.criteria.AppliancesParams;
+import com.epam.jwd.task02.constant.ApplianceName;
+import com.epam.jwd.task02.constant.ApplianceParam;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -51,8 +51,8 @@ public abstract class Appliance {
 
     public Map<String, String> getParams() {
         return new HashMap<>() {{
-            put("CATEGORY", AppliancesNames.Appliance.name());
-            put(AppliancesParams.PRICE, String.valueOf(price));
+            put("CATEGORY", ApplianceName.APPLIANCE);
+            put(ApplianceParam.PRICE, String.valueOf(price));
         }};
     }
 }

@@ -1,4 +1,4 @@
-package com.epam.jwd.task02.exception;
+package com.epam.jwd.task02.dao;
 
 public class DaoException extends Exception {
     public DaoException() {

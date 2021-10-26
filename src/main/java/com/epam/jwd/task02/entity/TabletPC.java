@@ -1,7 +1,7 @@
 package com.epam.jwd.task02.entity;
 
-import com.epam.jwd.task02.entity.criteria.AppliancesNames;
-import com.epam.jwd.task02.entity.criteria.AppliancesParams;
+import com.epam.jwd.task02.constant.ApplianceName;
+import com.epam.jwd.task02.constant.ApplianceParam;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -104,13 +104,13 @@ public class TabletPC extends Appliance {
     @Override
     public Map<String, String> getParams() {
         return new HashMap<>() {{
-            put("CATEGORY", AppliancesNames.TabletPC.name());
-            put(AppliancesParams.PRICE, String.valueOf(getPrice()));
-            put(AppliancesParams.TabletPC.COLOR.name(), String.valueOf(color));
-            put(AppliancesParams.TabletPC.FLASH_MEMORY_CAPACITY.name(), String.valueOf(flashMemoryCapacity));
-            put(AppliancesParams.TabletPC.BATTERY_CAPACITY.name(), String.valueOf(batteryCapacity));
-            put(AppliancesParams.TabletPC.MEMORY_ROM.name(), String.valueOf(memoryROM));
-            put(AppliancesParams.TabletPC.DISPLAY_INCHES.name(), String.valueOf(displayInches));
+            put("CATEGORY", ApplianceName.TABLET_PC);
+            put(ApplianceParam.PRICE, String.valueOf(getPrice()));
+            put(ApplianceParam.TabletPC.COLOR.name(), String.valueOf(color));
+            put(ApplianceParam.TabletPC.FLASH_MEMORY_CAPACITY.name(), String.valueOf(flashMemoryCapacity));
+            put(ApplianceParam.TabletPC.BATTERY_CAPACITY.name(), String.valueOf(batteryCapacity));
+            put(ApplianceParam.TabletPC.MEMORY_ROM.name(), String.valueOf(memoryROM));
+            put(ApplianceParam.TabletPC.DISPLAY_INCHES.name(), String.valueOf(displayInches));
         }};
     }
 }

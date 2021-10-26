@@ -2,28 +2,21 @@ package com.epam.jwd.task02.dao.factory.impl;
 
 import com.epam.jwd.task02.dao.factory.ApplianceFactory;
 import com.epam.jwd.task02.entity.VacuumCleaner;
+import com.epam.jwd.task02.constant.ApplianceParam;
 
 import java.util.Map;
 
 public class VacuumCleanerFactory implements ApplianceFactory {
-    private static final String CLEANING_WIDTH = "CLEANING_WIDTH";
-    private static final String POWER_CONSUMPTION = "POWER_CONSUMPTION";
-    private static final String BAG_TYPE = "BAG_TYPE";
-    private static final String WAND_TYPE = "WAND_TYPE";
-    private static final String FILTER_TYPE = "FILTER_TYPE";
-    private static final String MOTOR_SPEED_REGULATION = "MOTOR_SPEED_REGULATION";
-    private static final String PRICE = "PRICE";
-
     @Override
     public VacuumCleaner create(Map<String, String> parameters) {
-        VacuumCleaner product = new VacuumCleaner();
-        product.setCleaningWidth(Float.parseFloat(parameters.get(CLEANING_WIDTH)));
-        product.setWandType(parameters.get(WAND_TYPE));
-        product.setFilterType(parameters.get(FILTER_TYPE));
-        product.setBagType(parameters.get(BAG_TYPE));
-        product.setPowerConsumption(Float.parseFloat(parameters.get(POWER_CONSUMPTION)));
-        product.setPrice(Float.parseFloat(parameters.get(PRICE)));
-        product.setMotorSpeedRegulation(Float.parseFloat(parameters.get(MOTOR_SPEED_REGULATION)));
-        return product;
+        VacuumCleaner vacuumCleaner = new VacuumCleaner();
+        vacuumCleaner.setCleaningWidth(Float.parseFloat(parameters.get(ApplianceParam.VacuumCleaner.CLEANING_WIDTH.name())));
+        vacuumCleaner.setWandType(parameters.get(ApplianceParam.VacuumCleaner.WAND_TYPE.name()));
+        vacuumCleaner.setFilterType(parameters.get(ApplianceParam.VacuumCleaner.FILTER_TYPE.name()));
+        vacuumCleaner.setBagType(parameters.get(ApplianceParam.VacuumCleaner.BAG_TYPE.name()));
+        vacuumCleaner.setPowerConsumption(Float.parseFloat(parameters.get(ApplianceParam.VacuumCleaner.POWER_CONSUMPTION.name())));
+        vacuumCleaner.setPrice(Float.parseFloat(parameters.get(ApplianceParam.VacuumCleaner.PRICE.name())));
+        vacuumCleaner.setMotorSpeedRegulation(Float.parseFloat(parameters.get(ApplianceParam.VacuumCleaner.MOTOR_SPEED_REGULATION.name())));
+        return vacuumCleaner;
     }
 }

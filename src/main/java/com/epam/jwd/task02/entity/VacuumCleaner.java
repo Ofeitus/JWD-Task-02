@@ -1,7 +1,7 @@
 package com.epam.jwd.task02.entity;
 
-import com.epam.jwd.task02.entity.criteria.AppliancesNames;
-import com.epam.jwd.task02.entity.criteria.AppliancesParams;
+import com.epam.jwd.task02.constant.ApplianceName;
+import com.epam.jwd.task02.constant.ApplianceParam;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -117,14 +117,14 @@ public class VacuumCleaner extends Appliance {
     @Override
     public Map<String, String> getParams() {
         return new HashMap<>() {{
-            put("CATEGORY", AppliancesNames.VacuumCleaner.name());
-            put(AppliancesParams.PRICE, String.valueOf(getPrice()));
-            put(AppliancesParams.VacuumCleaner.POWER_CONSUMPTION.name(), String.valueOf(powerConsumption));
-            put(AppliancesParams.VacuumCleaner.FILTER_TYPE.name(), String.valueOf(filterType));
-            put(AppliancesParams.VacuumCleaner.BAG_TYPE.name(), String.valueOf(bagType));
-            put(AppliancesParams.VacuumCleaner.WAND_TYPE.name(), String.valueOf(wandType));
-            put(AppliancesParams.VacuumCleaner.MOTOR_SPEED_REGULATION.name(), String.valueOf(motorSpeedRegulation));
-            put(AppliancesParams.VacuumCleaner.CLEANING_WIDTH.name(), String.valueOf(cleaningWidth));
+            put("CATEGORY", ApplianceName.VACUUM_CLEANER);
+            put(ApplianceParam.PRICE, String.valueOf(getPrice()));
+            put(ApplianceParam.VacuumCleaner.POWER_CONSUMPTION.name(), String.valueOf(powerConsumption));
+            put(ApplianceParam.VacuumCleaner.FILTER_TYPE.name(), String.valueOf(filterType));
+            put(ApplianceParam.VacuumCleaner.BAG_TYPE.name(), String.valueOf(bagType));
+            put(ApplianceParam.VacuumCleaner.WAND_TYPE.name(), String.valueOf(wandType));
+            put(ApplianceParam.VacuumCleaner.MOTOR_SPEED_REGULATION.name(), String.valueOf(motorSpeedRegulation));
+            put(ApplianceParam.VacuumCleaner.CLEANING_WIDTH.name(), String.valueOf(cleaningWidth));
         }};
     }
 }

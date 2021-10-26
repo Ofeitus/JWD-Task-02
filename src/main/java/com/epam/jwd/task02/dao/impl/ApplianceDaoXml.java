@@ -4,13 +4,13 @@ import com.epam.jwd.task02.dao.ApplianceDao;
 import com.epam.jwd.task02.dao.parser.impl.XmlApplianceParser;
 import com.epam.jwd.task02.dao.writer.impl.XmlApplianceWriter;
 import com.epam.jwd.task02.entity.Appliance;
-import com.epam.jwd.task02.entity.criteria.AppliancesParams;
-import com.epam.jwd.task02.entity.criteria.Criteria;
+import com.epam.jwd.task02.constant.ApplianceParam;
+import com.epam.jwd.task02.entity.criteria.SearchCriteria;
 import com.epam.jwd.task02.dao.factory.ApplianceFactory;
 import com.epam.jwd.task02.dao.factory.ApplianceFactoryProducer;
-import com.epam.jwd.task02.exception.DaoException;
-import com.epam.jwd.task02.exception.XmlParserException;
-import com.epam.jwd.task02.exception.XmlWriterException;
+import com.epam.jwd.task02.dao.DaoException;
+import com.epam.jwd.task02.dao.parser.XmlParserException;
+import com.epam.jwd.task02.dao.writer.XmlWriterException;
 import org.xml.sax.SAXException;
 
 import javax.xml.parsers.ParserConfigurationException;
@@ -27,17 +27,17 @@ public class ApplianceDaoXml implements ApplianceDao {
             Objects.requireNonNull(getClass().getClassLoader().getResource("db.xml")).getFile());
 
     @Override
-    public List<Appliance> find(Criteria criteria) throws DaoException {
-        ApplianceFactory applianceFactory = ApplianceFactoryProducer.getFactory(criteria.getCategoryName());
+    public List<Appliance> find(SearchCriteria searchCriteria) throws DaoException {
+        ApplianceFactory applianceFactory = ApplianceFactoryProducer.getFactory(searchCriteria.getCategory());
         List<Appliance> appliances = new ArrayList<>();
         try {
             XmlApplianceParser xmlApplianceParser = new XmlApplianceParser();
             List<Map<String, String>> appliancesParams = xmlApplianceParser.parse(dbFile);
             for (Map<String, String> params : appliancesParams) {
 
-                if (params.get(AppliancesParams.CATEGORY).equals(criteria.getCategoryName()) &&
-                        criteria.getSearchCriteria().stream().allMatch(criterion ->
-                                criteria.get(criterion).toString().equals(params.get(criterion)))) {
+                if (params.get(ApplianceParam.CATEGORY).equals(searchCriteria.getCategory()) &&
+                        searchCriteria.getSearchCriteria().stream().allMatch(criterion ->
+                                searchCriteria.get(criterion).toString().equals(params.get(criterion)))) {
                     appliances.add(applianceFactory.create(params));
                 }
             }
@@ -55,7 +55,7 @@ public class ApplianceDaoXml implements ApplianceDao {
             List<Map<String, String>> appliancesParams = xmlApplianceParser.parse(dbFile);
             for (Map<String, String> params : appliancesParams) {
                 ApplianceFactory applianceFactory = ApplianceFactoryProducer.getFactory(
-                        params.get(AppliancesParams.CATEGORY));
+                        params.get(ApplianceParam.CATEGORY));
                 appliances.add(applianceFactory.create(params));
             }
             return appliances;

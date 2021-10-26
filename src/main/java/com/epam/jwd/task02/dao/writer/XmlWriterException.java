@@ -1,4 +1,4 @@
-package com.epam.jwd.task02.exception;
+package com.epam.jwd.task02.dao.writer;
 
 public class XmlWriterException extends Exception{
     public XmlWriterException() {

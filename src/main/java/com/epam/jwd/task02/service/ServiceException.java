@@ -1,4 +1,4 @@
-package com.epam.jwd.task02.exception;
+package com.epam.jwd.task02.service;
 
 public class ServiceException extends Exception {
     public ServiceException() {

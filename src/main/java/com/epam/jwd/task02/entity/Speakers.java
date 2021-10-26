@@ -1,7 +1,7 @@
 package com.epam.jwd.task02.entity;
 
-import com.epam.jwd.task02.entity.criteria.AppliancesNames;
-import com.epam.jwd.task02.entity.criteria.AppliancesParams;
+import com.epam.jwd.task02.constant.ApplianceName;
+import com.epam.jwd.task02.constant.ApplianceParam;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -92,12 +92,12 @@ public class Speakers extends Appliance{
     @Override
     public Map<String, String> getParams() {
         return new HashMap<>() {{
-            put("CATEGORY", AppliancesNames.Speakers.name());
-            put(AppliancesParams.PRICE, String.valueOf(getPrice()));
-            put(AppliancesParams.Speakers.POWER_CONSUMPTION.name(), String.valueOf(powerConsumption));
-            put(AppliancesParams.Speakers.NUMBER_OF_SPEAKERS.name(), String.valueOf(numberOfSpeakers));
-            put(AppliancesParams.Speakers.FREQUENCY_RANGE.name(), String.valueOf(frequencyRange));
-            put(AppliancesParams.Speakers.CORD_LENGTH.name(), String.valueOf(cordLength));
+            put("CATEGORY", ApplianceName.SPEAKERS);
+            put(ApplianceParam.PRICE, String.valueOf(getPrice()));
+            put(ApplianceParam.Speakers.POWER_CONSUMPTION.name(), String.valueOf(powerConsumption));
+            put(ApplianceParam.Speakers.NUMBER_OF_SPEAKERS.name(), String.valueOf(numberOfSpeakers));
+            put(ApplianceParam.Speakers.FREQUENCY_RANGE.name(), String.valueOf(frequencyRange));
+            put(ApplianceParam.Speakers.CORD_LENGTH.name(), String.valueOf(cordLength));
         }};
     }
 }

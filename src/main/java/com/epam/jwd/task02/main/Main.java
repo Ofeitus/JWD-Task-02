@@ -1,15 +1,14 @@
 package com.epam.jwd.task02.main;
 
 import com.epam.jwd.task02.entity.Refrigerator;
-import com.epam.jwd.task02.entity.criteria.Criteria;
-import com.epam.jwd.task02.exception.ServiceException;
+import com.epam.jwd.task02.entity.criteria.SearchCriteria;
+import com.epam.jwd.task02.service.ServiceException;
 import com.epam.jwd.task02.service.ApplianceService;
 import com.epam.jwd.task02.service.ServiceFactory;
 import com.epam.jwd.task02.entity.Appliance;
 import com.epam.jwd.task02.entity.Oven;
 import com.epam.jwd.task02.entity.TabletPC;
-import com.epam.jwd.task02.entity.criteria.AppliancesParams;
-import com.epam.jwd.task02.utils.PrintApplianceInfo;
+import com.epam.jwd.task02.constant.ApplianceParam;
 
 import java.util.List;
 
@@ -22,29 +21,29 @@ public class Main {
 
         //////////////////////////////////////////////////////////////////
 
-        Criteria criteriaOven = new Criteria(Oven.class.getSimpleName());
-        criteriaOven.add(AppliancesParams.Oven.CAPACITY.toString(), 33);
+        SearchCriteria searchCriteriaOven = new SearchCriteria(Oven.class.getSimpleName());
+        searchCriteriaOven.add(ApplianceParam.Oven.CAPACITY.toString(), 33);
 
-        applianceList = service.find(criteriaOven);
+        applianceList = service.find(searchCriteriaOven);
         System.out.println("find1");
         PrintApplianceInfo.print(applianceList);
 
         //////////////////////////////////////////////////////////////////
 
-        Criteria criteriaTabletPC = new Criteria(TabletPC.class.getSimpleName());
-        criteriaTabletPC.add(AppliancesParams.TabletPC.COLOR.toString(), "Blue");
-        criteriaTabletPC.add(AppliancesParams.TabletPC.DISPLAY_INCHES.toString(), 14);
-        criteriaTabletPC.add(AppliancesParams.TabletPC.MEMORY_ROM.toString(), 1000);
+        SearchCriteria searchCriteriaTabletPC = new SearchCriteria(TabletPC.class.getSimpleName());
+        searchCriteriaTabletPC.add(ApplianceParam.TabletPC.COLOR.toString(), "Blue");
+        searchCriteriaTabletPC.add(ApplianceParam.TabletPC.DISPLAY_INCHES.toString(), 14);
+        searchCriteriaTabletPC.add(ApplianceParam.TabletPC.MEMORY_ROM.toString(), 1000);
 
-        applianceList = service.find(criteriaTabletPC);
+        applianceList = service.find(searchCriteriaTabletPC);
         System.out.println("find2");
         PrintApplianceInfo.print(applianceList);
 
         //////////////////////////////////////////////////////////////////
 
-        Criteria criteriaRefrigerator = new Criteria(Refrigerator.class.getSimpleName());
+        SearchCriteria searchCriteriaRefrigerator = new SearchCriteria("Rafrigerator");
 
-        applianceList = service.find(criteriaRefrigerator);
+        applianceList = service.find(searchCriteriaRefrigerator);
         System.out.println("find3");
         PrintApplianceInfo.print(applianceList);
 
@@ -65,6 +64,6 @@ public class Main {
                 0.6f,
                 0.7f
         );
-        service.add(refrigerator);
+        //service.add(refrigerator);
     }
 }

@@ -1,10 +1,8 @@
 package com.epam.jwd.task02.dao.parser.impl;
 
 import com.epam.jwd.task02.dao.parser.ApplianceParser;
-import com.epam.jwd.task02.entity.criteria.AppliancesNames;
-import com.epam.jwd.task02.entity.criteria.AppliancesParams;
-import com.epam.jwd.task02.exception.XmlParserException;
-import com.epam.jwd.task02.utils.EnumUtils;
+import com.epam.jwd.task02.constant.ApplianceParam;
+import com.epam.jwd.task02.dao.parser.XmlParserException;
 import org.xml.sax.Attributes;
 import org.xml.sax.SAXException;
 import org.xml.sax.helpers.DefaultHandler;
@@ -22,8 +20,6 @@ import java.util.Map;
 public class XmlApplianceParser implements ApplianceParser {
     private static List<Map<String, String>> appliancesParams;
 
-
-
     public List<Map<String, String>> parse(File dbFile) throws XmlParserException, ParserConfigurationException, SAXException, IOException {
         SAXParserFactory factory = SAXParserFactory.newInstance();
         SAXParser parser = factory.newSAXParser();
@@ -37,31 +33,43 @@ public class XmlApplianceParser implements ApplianceParser {
     }
 
     private static class XMLHandler extends DefaultHandler {
+        private boolean readingAppliances = false;
+        private boolean finishedReadingAppliance = true;
+        private String currentApplianceCategory;
+        private Map<String, String> applianceParams = new HashMap<>();
         private String lastElementName;
-        private Map<String, String> params = new HashMap<>();
 
         @Override
         public void startElement(String uri, String localName, String qName, Attributes attributes) throws SAXException {
             lastElementName = qName;
-            if (EnumUtils.isValidEnum(AppliancesNames.class, qName)) {
-                params = new HashMap<>();
-                params.put(AppliancesParams.CATEGORY, qName);
+            if (qName.equals("appliances")) {
+                readingAppliances = true;
+            } else if (readingAppliances && finishedReadingAppliance) {
+                finishedReadingAppliance = false;
+                currentApplianceCategory = qName;
+                applianceParams = new HashMap<>();
+                applianceParams.put(ApplianceParam.CATEGORY, qName);
             }
         }
 
         @Override
         public void endElement(String uri, String localName, String qName) throws SAXException {
-            if (EnumUtils.isValidEnum(AppliancesNames.class, qName)) {
-                appliancesParams.add(params);
+            if (qName.equals("appliances")) {
+                readingAppliances = false;
+            } else if (qName.equals(currentApplianceCategory)) {
+                finishedReadingAppliance = true;
+                appliancesParams.add(applianceParams);
             }
         }
 
         @Override
         public void characters(char[] ch, int start, int length) throws SAXException {
-            String data = new String(ch, start, length);
-            data = data.replace("\n", "").trim();
-            if (!data.isEmpty()) {
-                params.put(lastElementName.toUpperCase(), data);
+            if (readingAppliances) {
+                String data = new String(ch, start, length);
+                data = data.replace("\n", "").trim();
+                if (!data.isEmpty()) {
+                    applianceParams.put(lastElementName.toUpperCase(), data);
+                }
             }
         }
     }

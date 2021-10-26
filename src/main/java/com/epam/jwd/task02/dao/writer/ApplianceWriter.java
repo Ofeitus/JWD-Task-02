@@ -1,7 +1,6 @@
 package com.epam.jwd.task02.dao.writer;
 
 import com.epam.jwd.task02.entity.Appliance;
-import com.epam.jwd.task02.exception.XmlWriterException;
 import org.xml.sax.SAXException;
 
 import javax.xml.parsers.ParserConfigurationException;

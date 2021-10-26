@@ -1,6 +1,6 @@
-package com.epam.jwd.task02.entity.criteria;
+package com.epam.jwd.task02.constant;
 
-public final class AppliancesParams {
+public final class ApplianceParam {
     public static final String CATEGORY = "CATEGORY";
     public static final String PRICE = "PRICE";
 
@@ -28,7 +28,7 @@ public final class AppliancesParams {
         POWER_CONSUMPTION, NUMBER_OF_SPEAKERS, FREQUENCY_RANGE, CORD_LENGTH, PRICE
     }
 
-    private AppliancesParams() {
+    private ApplianceParam() {
 
     }
 }

@@ -1,6 +1,5 @@
 package com.epam.jwd.task02.dao.parser;
 
-import com.epam.jwd.task02.exception.XmlParserException;
 import org.xml.sax.SAXException;
 
 import javax.xml.parsers.ParserConfigurationException;

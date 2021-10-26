@@ -1,4 +1,4 @@
-package com.epam.jwd.task02.utils;
+package com.epam.jwd.task02.main;
 
 import com.epam.jwd.task02.entity.Appliance;
 
