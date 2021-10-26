@@ -7,7 +7,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 
-public abstract class Appliance {
+public abstract class Appliance implements Parameterizable {
     private float price;
 
     public Appliance() {
@@ -49,6 +49,7 @@ public abstract class Appliance {
                 '}';
     }
 
+    @Override
     public Map<String, String> getParams() {
         return new HashMap<>() {{
             put("CATEGORY", ApplianceName.APPLIANCE);

@@ -7,7 +7,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 
-public class Speakers extends Appliance{
+public class Speakers extends Appliance {
     private float powerConsumption;
     private int numberOfSpeakers;
     private String frequencyRange;
