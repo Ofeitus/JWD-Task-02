@@ -1,6 +1,6 @@
 package com.epam.jwd.task02.dao.factory;
 
-import com.epam.jwd.task02.constant.ApplianceName;
+import com.epam.jwd.task02.constant.ApplianceCategory;
 import com.epam.jwd.task02.dao.factory.impl.*;
 
 import java.util.HashMap;
@@ -14,12 +14,12 @@ import java.util.Map;
  */
 public class ApplianceFactoryProvider {
     private static final Map<String, ApplianceFactory> factories = new HashMap<>() {{
-        put(ApplianceName.OVEN, new OvenFactory());
-        put(ApplianceName.LAPTOP, new LaptopFactory());
-        put(ApplianceName.REFRIGERATOR, new RefrigeratorFactory());
-        put(ApplianceName.VACUUM_CLEANER, new VacuumCleanerFactory());
-        put(ApplianceName.TABLET_PC, new TabletPCFactory());
-        put(ApplianceName.SPEAKERS, new SpeakersFactory());
+        put(ApplianceCategory.OVEN, new OvenFactory());
+        put(ApplianceCategory.LAPTOP, new LaptopFactory());
+        put(ApplianceCategory.REFRIGERATOR, new RefrigeratorFactory());
+        put(ApplianceCategory.VACUUM_CLEANER, new VacuumCleanerFactory());
+        put(ApplianceCategory.TABLET_PC, new TabletPCFactory());
+        put(ApplianceCategory.SPEAKERS, new SpeakersFactory());
     }};
 
     /**

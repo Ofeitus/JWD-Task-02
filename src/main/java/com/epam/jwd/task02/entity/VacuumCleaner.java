@@ -1,6 +1,6 @@
 package com.epam.jwd.task02.entity;
 
-import com.epam.jwd.task02.constant.ApplianceName;
+import com.epam.jwd.task02.constant.ApplianceCategory;
 import com.epam.jwd.task02.constant.ApplianceParam;
 
 import java.util.HashMap;
@@ -197,7 +197,7 @@ public class VacuumCleaner extends Appliance {
     @Override
     public Map<String, String> getParams() {
         return new HashMap<>() {{
-            put("CATEGORY", ApplianceName.VACUUM_CLEANER);
+            put("CATEGORY", ApplianceCategory.VACUUM_CLEANER);
             put(ApplianceParam.PRICE, String.valueOf(getPrice()));
             put(ApplianceParam.VacuumCleaner.POWER_CONSUMPTION.name(), String.valueOf(powerConsumption));
             put(ApplianceParam.VacuumCleaner.FILTER_TYPE.name(), String.valueOf(filterType));

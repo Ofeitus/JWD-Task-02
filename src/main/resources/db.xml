@@ -137,18 +137,21 @@
             <price>300</price>
             <power_consumption>15</power_consumption>
             <number_of_speakers>2</number_of_speakers>
+            <frequency_range>20-20000</frequency_range>
             <cord_length>2</cord_length>
         </Speakers>
         <Speakers>
             <price>400</price>
             <power_consumption>16</power_consumption>
             <number_of_speakers>3</number_of_speakers>
+            <frequency_range>20-20000</frequency_range>
             <cord_length>3</cord_length>
         </Speakers>
         <Speakers>
             <price>350</price>
             <power_consumption>17</power_consumption>
             <number_of_speakers>4</number_of_speakers>
+            <frequency_range>20-20000</frequency_range>
             <cord_length>4</cord_length>
         </Speakers>
     </appliances>

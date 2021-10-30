@@ -1,6 +1,6 @@
 package com.epam.jwd.task02.entity;
 
-import com.epam.jwd.task02.constant.ApplianceName;
+import com.epam.jwd.task02.constant.ApplianceCategory;
 import com.epam.jwd.task02.constant.ApplianceParam;
 
 import java.util.HashMap;
@@ -150,7 +150,7 @@ public class Speakers extends Appliance {
     @Override
     public Map<String, String> getParams() {
         return new HashMap<>() {{
-            put("CATEGORY", ApplianceName.SPEAKERS);
+            put("CATEGORY", ApplianceCategory.SPEAKERS);
             put(ApplianceParam.PRICE, String.valueOf(getPrice()));
             put(ApplianceParam.Speakers.POWER_CONSUMPTION.name(), String.valueOf(powerConsumption));
             put(ApplianceParam.Speakers.NUMBER_OF_SPEAKERS.name(), String.valueOf(numberOfSpeakers));

@@ -10,11 +10,11 @@ public final class ApplianceParam {
     public static final String CATEGORY = "CATEGORY";
     public static final String PRICE = "PRICE";
 
-    public enum Oven{
+    public enum Oven {
         POWER_CONSUMPTION, WEIGHT, CAPACITY, DEPTH, HEIGHT, WIDTH, PRICE
     }
 
-    public enum Laptop{
+    public enum Laptop {
         BATTERY_CAPACITY, OS, MEMORY_ROM, SYSTEM_MEMORY, CPU, DISPLAY_INCHES, PRICE
     }
 

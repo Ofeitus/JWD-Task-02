@@ -6,6 +6,8 @@ import com.epam.jwd.task02.dao.DaoFactory;
 import com.epam.jwd.task02.entity.Appliance;
 import com.epam.jwd.task02.dao.DaoException;
 import com.epam.jwd.task02.service.ServiceException;
+import com.epam.jwd.task02.service.validator.ApplianceCriteriaValidatorProvider;
+import com.epam.jwd.task02.service.validator.ValidatorException;
 
 import java.util.List;
 
@@ -20,8 +22,9 @@ public class ApplianceServiceImpl implements ApplianceService {
     public List<Appliance> find(SearchCriteria searchCriteria) throws ServiceException {
         List<Appliance> appliances;
         try {
+            ApplianceCriteriaValidatorProvider.getValidator(searchCriteria.getCategory()).validate(searchCriteria);
             appliances = DaoFactory.getInstance().getApplianceDAO().find(searchCriteria);
-        } catch (DaoException exception) {
+        } catch (DaoException | ValidatorException exception) {
             throw new ServiceException(exception);
         }
         return appliances;

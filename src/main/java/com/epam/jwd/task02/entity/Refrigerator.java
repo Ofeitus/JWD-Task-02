@@ -1,6 +1,6 @@
 package com.epam.jwd.task02.entity;
 
-import com.epam.jwd.task02.constant.ApplianceName;
+import com.epam.jwd.task02.constant.ApplianceCategory;
 import com.epam.jwd.task02.constant.ApplianceParam;
 
 import java.util.HashMap;
@@ -196,7 +196,7 @@ public class Refrigerator extends Appliance {
     @Override
     public Map<String, String> getParams() {
         return new HashMap<>() {{
-            put("CATEGORY", ApplianceName.REFRIGERATOR);
+            put("CATEGORY", ApplianceCategory.REFRIGERATOR);
             put(ApplianceParam.PRICE, String.valueOf(getPrice()));
             put(ApplianceParam.Refrigerator.POWER_CONSUMPTION.name(), String.valueOf(powerConsumption));
             put(ApplianceParam.Refrigerator.FREEZER_CAPACITY.name(), String.valueOf(freezerCapacity));

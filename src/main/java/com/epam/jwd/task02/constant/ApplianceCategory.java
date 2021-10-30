@@ -6,7 +6,7 @@ package com.epam.jwd.task02.constant;
  * @author Ofeitus
  * @version 1.0
  */
-public final class ApplianceName {
+public final class ApplianceCategory {
     public static final String LAPTOP = "Laptop";
     public static final String OVEN = "Oven";
     public static final String REFRIGERATOR = "Refrigerator";
@@ -15,7 +15,7 @@ public final class ApplianceName {
     public static final String VACUUM_CLEANER = "VacuumCleaner";
     public static final String APPLIANCE = "Appliance";
 
-    private ApplianceName() {
+    private ApplianceCategory() {
 
     }
 }

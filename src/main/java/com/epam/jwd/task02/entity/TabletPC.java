@@ -1,6 +1,6 @@
 package com.epam.jwd.task02.entity;
 
-import com.epam.jwd.task02.constant.ApplianceName;
+import com.epam.jwd.task02.constant.ApplianceCategory;
 import com.epam.jwd.task02.constant.ApplianceParam;
 
 import java.util.HashMap;
@@ -173,7 +173,7 @@ public class TabletPC extends Appliance {
     @Override
     public Map<String, String> getParams() {
         return new HashMap<>() {{
-            put("CATEGORY", ApplianceName.TABLET_PC);
+            put("CATEGORY", ApplianceCategory.TABLET_PC);
             put(ApplianceParam.PRICE, String.valueOf(getPrice()));
             put(ApplianceParam.TabletPC.COLOR.name(), String.valueOf(color));
             put(ApplianceParam.TabletPC.FLASH_MEMORY_CAPACITY.name(), String.valueOf(flashMemoryCapacity));

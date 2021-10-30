@@ -1,6 +1,6 @@
 package com.epam.jwd.task02.entity;
 
-import com.epam.jwd.task02.constant.ApplianceName;
+import com.epam.jwd.task02.constant.ApplianceCategory;
 import com.epam.jwd.task02.constant.ApplianceParam;
 
 import java.util.HashMap;
@@ -196,7 +196,7 @@ public class Laptop extends Appliance {
     @Override
     public Map<String, String> getParams() {
         return new HashMap<>() {{
-            put("CATEGORY", ApplianceName.LAPTOP);
+            put("CATEGORY", ApplianceCategory.LAPTOP);
             put(ApplianceParam.PRICE, String.valueOf(getPrice()));
             put(ApplianceParam.Laptop.BATTERY_CAPACITY.name(), String.valueOf(batteryCapacity));
             put(ApplianceParam.Laptop.CPU.name(), String.valueOf(CPU));

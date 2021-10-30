@@ -1,6 +1,6 @@
 package com.epam.jwd.task02.entity;
 
-import com.epam.jwd.task02.constant.ApplianceName;
+import com.epam.jwd.task02.constant.ApplianceCategory;
 import com.epam.jwd.task02.constant.ApplianceParam;
 
 import java.util.HashMap;
@@ -76,7 +76,7 @@ public abstract class Appliance implements Parameterizable {
     @Override
     public Map<String, String> getParams() {
         return new HashMap<>() {{
-            put("CATEGORY", ApplianceName.APPLIANCE);
+            put("CATEGORY", ApplianceCategory.APPLIANCE);
             put(ApplianceParam.PRICE, String.valueOf(price));
         }};
     }
